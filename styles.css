@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #F5F5F5;
+  line-height: 1.6;
+  overflow-x: hidden; 
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap");
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background: #003366;
+  color: white;
+  padding: 20px 0;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.hero {
+  background-image: url(background.jpg);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero .cta-button {
+  display: inline-block;
+  background: #003366;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #003366;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #005599;
+  color: #ffffff;
+}
+
+.about,
+.services,
+.contact,
+.rsc {
+  background: white;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Más sombra */
+}
+
+.services .service-list {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px;
+}
+
+.services .service-card {
+  flex: 1 1 calc(100% - 40px); 
+  max-width: 300px; 
+  padding: 20px;
+  background: #F5F5F5;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Más intensidad al hacer hover */
+}
+
+.service-card h3 {
+  color: #003366;
+}
+
+.rsc-details {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px;
+}
+
+.rsc-item {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+  flex: 1 1 calc(100% - 40px); 
+  max-width: 300px; 
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rsc-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Más intensidad al hacer hover */
+}
+
+.rsc-item h3 {
+  color: #0074CC;
+  margin-bottom: 10px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #0074CC;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* WEB RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 10px; 
+  }
+
+  header nav ul li {
+    margin: 0 5px;
+  }
+
+  .services .service-card,
+  .rsc-item {
+    flex: 1 1 100%; 
+    max-width: 100%;
+  }
+
+  .contact input,
+  .contact textarea {
+    max-width: 100%; 
+  }
+}
